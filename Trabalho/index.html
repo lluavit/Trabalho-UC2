@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Delivery</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">Delivery</div>
+        <nav>
+            <ul>
+                <li><a href="#home">Início</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#promocoes">Promoções</a></li>
+                <li><a href="#contato">Contato</a></li>
+                <li><a href="#carrinho">Carrinho (<span id="cart-count">0</span>)</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <h1>Peça sua comida favorita!</h1>
+            <p>Entregamos rapidamente para você.</p>
+            <a href="#menu" class="btn">Ver Menu</a>
+        </section>
+
+        <section id="restaurantes">
+            <h2>Restaurantes Disponíveis</h2>
+            <div class="card-container">
+                <div class="card">
+                    <h3>Restaurante </h3>
+                    <p>Cozinha Italiana</p>
+                </div>
+                <div class="card">
+                    <h3>Restaurante </h3>
+                    <p>Cozinha Japonesa</p>
+                </div>
+                <div class="card">
+                    <h3>Restaurante </h3>
+                    <p>Cozinha Mexicana</p>
+                </div>
+                <div class="card">
+                    <h3>Restaurante </h3>
+                    <p>Cozinha Brasileira</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="menu">
+            <h2>Menu</h2>
+            <div class="card-container">
+                <div class="card">
+                    <img src="pizza.jpg" alt="Pizza Margherita">
+                    <h3>Pizza Margherita</h3>
+                    <p>R$ 29,90</p>
+                    <button onclick="addToCart('Pizza Margherita', 29.90)">Adicionar ao Carrinho</button>
+                </div>
+                <div class="card">
+                    <img src="hamburguer.jpg" alt="Hambúrguer ">
+                    <h3>Hambúrguer</h3>
+                    <p>R$ 19,90</p>
+                    <button onclick="addToCart('Hambúrguer', 19.90)">Adicionar ao Carrinho</button>
+                </div>
+                <div class="card">
+                    <img src="sushi.jpg" alt="Sushi Variado">
+                    <h3>Sushi Variado</h3>
+                    <p>R$ 49,90</p>
+                    <button onclick="addToCart('Sushi Variado', 49.90)">Adicionar ao Carrinho</button>
+                </div>
+                <div class="card">
+                    <img src="lasanha.jpg" alt="Lasanha">
+                    <h3>Lasanha</h3>
+                    <p>R$ 34,90</p>
+                    <button onclick="addToCart('Lasanha', 34.90)">Adicionar ao Carrinho</button>
+                </div>
+                <div class="card">
+                    <img src="salada.jpg" alt="Salada Caesar">
+                    <h3>Salada Caesar</h3>
+                    <p>R$ 22,90</p>
+                    <button onclick="addToCart('Salada Caesar', 22.90)">Adicionar ao Carrinho</button>
+                </div>
+                <div class="card">
+                    <img src="taco.jpg" alt="Taco Mexicano">
+                    <h3>Taco Mexicano</h3>
+                    <p>R$ 18,90</p>
+                    <button onclick="addToCart('Taco Mexicano', 18.90)">Adicionar ao Carrinho</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="promocoes">
+            <h2>Promoções</h2>
+            <div class="promo-container">
+                <div class="promo-card">
+                    <h3>Desconto de 20% em Pizzas</h3>
+                    <p>Utilize o código: PIZZA20</p>
+                </div>
+                <div class="promo-card">
+                    <h3>Compre 1 e Leve 2 em Sushi</h3>
+                    <p>Oferta válida até o final do mês!</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contato">
+            <h2>Contato</h2>
+            <p>Endereço: Rua Tito, 123 - São Paulo, São Pualo</p>
+            <p>Telefone: (11) 12345-6789</p>
+            <div class="social">
+                <h3>Siga-nos nas redes sociais</h3>
+                <a href="#" class="social-link"><i class="fab fa-facebook-f"></i> Facebook</a>
+                <a href="#" class="social-link"><i class="fab fa-instagram"></i> Instagram</a>
+                <a href="#" class="social-link"><i class="fab fa-twitter"></i> Twitter</a>
+            </div>
+        </section>
+
+        <section id="carrinho">
+            <h2>Carrinho</h2>
+            <div id="cart-items"></div>
+            <button onclick="checkout()">Finalizar Pedido</button>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <p>&copy; 2024 Delivery. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
