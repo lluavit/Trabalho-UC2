@@ -1,4 +1,3 @@
-# Trabalho-UC2
 # Web Layout — UC2
 
 Projeto de desenvolvimento web criado durante meus estudos de Engenharia/Tecnologia.
